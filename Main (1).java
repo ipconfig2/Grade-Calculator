@@ -1,81 +1,77 @@
-// Holden Weber this is my own work
-
 import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// prompt user for number of grades (make sure they enter at least 3)
-		int numGrades;
-		Scanner reader = new Scanner(System.in);
-		System.out.println("Enter number of grades:"); //asks user for grades
-		numGrades = reader.nextInt();//reads in grades
-		while (numGrades < 3) {
-			System.out.println("Must enter at least 3 grades.  Try again:");
-			numGrades = reader.nextInt();
-		}
+        // prompt user for number of grades (make sure they enter at least 3)
+        int numGrades;
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Enter number of grades:"); // asks user for grades
+        numGrades = reader.nextInt(); // reads in grades
+        while (numGrades < 3) {
+            System.out.println("Must enter at least 3 grades.  Try again:");
+            numGrades = reader.nextInt();
+        }
 
-		// construct an int array to hold numGrades elements
-		// YOUR CODE HERE
-    int[] grades = new int[numGrades];
-		// prompt user for each grade & store it in grades array
-		System.out.println("Enter each grade now:");
-		for (int i = 0; i < grades.length; i++)
-			grades[i] = reader.nextInt();
+        // construct an int array to hold numGrades elements
+        int[] grades = new int[numGrades];
 
-		// pass grades to calcMax function & print info
-		System.out.println("Highest grade: " + calcMax(grades));
+        // prompt user for each grade & store it in grades array
+        System.out.println("Enter each grade now:");
+        for (int i = 0; i < grades.length; i++)
+            grades[i] = reader.nextInt();
 
-		// pass grades to calcMin function & print info
-		// YOUR CODE HERE
-	  System.out.println("Lowest grade: " + calcMin(grades));
+        // pass grades to calcMax function & print info
+        System.out.println("Highest grade: " + calcMax(grades));
 
-		// pass grades to calcAverage & print info
-		// YOUR CODE HERE
-   System.out.println("Adverage grade: " + calcAdv(grades));
-	}
+        // pass grades to calcMin function & print info
+        System.out.println("Lowest grade: " + calcMin(grades));
 
-	// calculate the maximum element value in any int array
-	public static int calcMax(int[] anyArray) {
-		// start by assuming first element is max
-		int max = anyArray[0];
+        // pass grades to calcAverage & print info
+        System.out.println("Average grade: " + calcAdv(grades));
+    }
 
-		// check other elements & update if larger
-		for (int i = 1; i < anyArray.length; i++) {
-			if (anyArray[i] > max) {
-				max = anyArray[i];
-			}
-		}
-		return max;
-	}
+    // calculate the maximum element value in any int array
+    public static int calcMax(int[] anyArray) {
+        // start by assuming the first element is max
+        int max = anyArray[0];
 
-	// calculate the minimum element value in any int array
-	// YOUR CODE HERE
-public static int calcMin(int[] anyArray) {
-		// start by assuming first element is max
-		int min = anyArray[0];
+        // check other elements & update if larger
+        for (int i = 1; i < anyArray.length; i++) {
+            if (anyArray[i] > max) {
+                max = anyArray[i];
+            }
+        }
+        return max;
+    }
 
-		// check other elements & update if larger
-		for (int i = 1; i < anyArray.length; i++) {
-			if (anyArray[i] < min) {
-				min = anyArray[i];
-			}
-		}
-		return min;
-	}
-	// calculate the average element value in any int array
-	// make sure to return a double
-	// YOUR CODE HERE
-public static int calcAdv(int[] anyArray) {
-		// start by assuming first element is max
-		int adv = anyArray[0];
-    int add = 0;
-		// check other elements & update if larger
-		for (int i = 1; i < anyArray.length; i++) {
-			add = anyArray[i] + add;
-      adv = add/anyArray.length;
-		}
-		return adv;
-	}
+    // calculate the minimum element value in any int array
+    public static int calcMin(int[] anyArray) {
+        // start by assuming the first element is min
+        int min = anyArray[0];
+
+        // check other elements & update if smaller
+        for (int i = 1; i < anyArray.length; i++) {
+            if (anyArray[i] < min) {
+                min = anyArray[i];
+            }
+        }
+        return min;
+    }
+
+    // calculate the average element value in any int array
+    // make sure to return a double
+    public static double calcAdv(int[] anyArray) {
+        // start by assuming first element is max
+        int adv = anyArray[0];
+        int add = 0;
+
+        // check other elements & update if larger
+        for (int i = 1; i < anyArray.length; i++) {
+            add = anyArray[i] + add;
+            adv = add / anyArray.length;
+        }
+        return adv;
+    }
 }
