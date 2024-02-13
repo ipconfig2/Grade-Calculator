@@ -26,14 +26,14 @@ This Java program prompts the user for a specified number of grades, calculates 
 
 1. **Clone the Repository:**
     ```bash
-    git clone https://github.com/your-username/grade-calculator.git
+    git clone https://github.com/ipconfig2/grade-calculator.git
     cd grade-calculator
     ```
 
 2. **Compile and Run:**
     ```bash
-    javac Main.java
-    java Main
+    javac Grade.java
+    java Grade
     ```
 
 3. **Follow the Prompts:**
@@ -43,18 +43,8 @@ This Java program prompts the user for a specified number of grades, calculates 
 4. **View Results:**
    - The program will display the highest, lowest, and average grades.
 
-## Contributing
-
-If you would like to contribute to this project, follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature: `git checkout -b feature-name`
-3. Commit your changes: `git commit -m 'Add feature-name'`
-4. Push to the branch: `git push origin feature-name`
-5. Submit a pull request.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Feel free to use, modify, and distribute this code for your own purposes.
+Feel free to use, modify, and distribute this code for your purposes.
