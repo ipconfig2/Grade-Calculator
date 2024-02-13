@@ -7,10 +7,10 @@ public class Main {
         // prompt user for number of grades (make sure they enter at least 3)
         int numGrades;
         Scanner reader = new Scanner(System.in);
-        System.out.println("Enter number of grades:"); // asks user for grades
+        System.out.println("Enter number of grades:"); // asks the user for grades
         numGrades = reader.nextInt(); // reads in grades
         while (numGrades < 3) {
-            System.out.println("Must enter at least 3 grades.  Try again:");
+            System.out.println("Must enter at least 3 grades. Try again:");
             numGrades = reader.nextInt();
         }
 
@@ -64,14 +64,13 @@ public class Main {
     // make sure to return a double
     public static double calcAdv(int[] anyArray) {
         // start by assuming first element is max
-        int adv = anyArray[0];
         int add = 0;
 
         // check other elements & update if larger
-        for (int i = 1; i < anyArray.length; i++) {
+        for (int i = 0; i < anyArray.length; i++) {
             add = anyArray[i] + add;
-            adv = add / anyArray.length;
         }
-        return adv;
+
+        return (double) add / anyArray.length;
     }
 }
